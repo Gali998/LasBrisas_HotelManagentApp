@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">hallResrvation</string>
+    <string name="trust_our_splendid_conference_hall_to_success_your_event_to_hold_a_grand_conference_with_graceful_manner_make_a_everlasting_impression_on_your_business_partner_grab_the_chance_to_make_marvelous_event">Trust our splendid conference hall to success your event.To hold a grand conference with graceful manner.Make a everlasting impression on your business partner.Grab the chance to make marvelous event.</string>
+    <string name="facilities_capacity_up_to_100_private_board_room_natural_lights_free_wifi"><![CDATA[Facilities \n->Capacity up to 100 \n->Private Board Room \n->Natural Lights \n->Free Wifi]]></string>
+    <string name="banquet_conference_request_form"><![CDATA[Banquet & Conference Request Form]]></string>
+    <string name="pitcher_snacks"><![CDATA[Pitcher & Snacks]]></string>
+    <string name="pitchers_snacks"><![CDATA[Pitcher & Snacks]]></string>
+    <string name="las_brisas">LAS BRISAS</string>
+    <string name="special_offers">Special Offers</string>
+    <string name="high_tea">High Tea</string>
+    <string name="banquet_halls">Banquet Halls</string>
+    <string name="aquarium_hall">Aquarium Hall</string>
+    <string name="lotus_hall">Lotus Hall</string>
+    <string name="lavender_ballroom">Lavender Ballroom</string>
+    <string name="enjoy_your_special_day_at_our_elegant_ballroom_with_a_separate_dance_floor_lavender_ballroom_offers_a_luxurious_ambience_to_make_a_awesome_occassion">Enjoy your special day at our elegant ballroom with a separate dance floor.Lavender ballroom offers a luxurious ambience to make a awesome occassion.</string>
+    <string name="facilities_capacity_up_to_500_exceptional_cuisine_superior_lighting"><![CDATA[Facilities \n->Capacity up to 500 \n->Exceptional cuisine \n->Superior Lighting]]></string>
+    <string name="grand_ballroom">Grand Ballroom</string>
+    <string name="conference"><![CDATA[Facilities\n ->Capacity up to 60\n ->Private board room \n->private garden]]></string>
+    <string name="restaurant_bar"><![CDATA[Restaurant & Bar >]]></string>
+</resources>
