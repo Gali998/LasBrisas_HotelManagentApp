@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Payment</string>
+    <string name="textView">Payment Successfull                 Enjoy the day</string>
+    <string name="textView1">Select payment method</string>
+    <string name="textView4">Name</string>
+    <string name="textView2">Date</string>
+    <string name="textView3">Amount</string>
+    <string name="textView5">Enter Card details</string>
+
+    <string name="textView8">Card number</string>
+    <string name="textView9">Expiry Date</string>
+    <string name="textView6">Security code</string>
+
+</resources>
