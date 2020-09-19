@@ -41,30 +41,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.692" />
 
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="161dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:text="2.30-7.00 p.m
+                      @bar"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
     <EditText
         android:id="@+id/editTextTextMultiLine10"
-        android:layout_width="263dp"
-        android:layout_height="108dp"
+        android:layout_width="292dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:text="Famous high tea is back now.Come join us.Buffet priced at Rs.1800/- net per person"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.958" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="124dp"
-        android:layout_height="60dp"
-        android:text="2.30-7.00 p.m  @bar"
+        android:text="@string/famous_high_tea_is_back_now_come_join_us_buffed_price_at_rs_1800_net_per_person"
+        android:textColor="@android:color/background_dark"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.777" />
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

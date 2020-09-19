@@ -9,33 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomePage">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PitcherSnacks">
+        <activity android:name=".HomePage">
         </activity>
-        <activity android:name=".HighTea">
-        </activity>
-        <activity android:name=".SpecialOffers">
-        </activity>
-        <activity android:name=".HallReservation" >
-
-        </activity>
-        <activity android:name=".GrandBallroom" >
-        </activity>
-        <activity android:name=".Lavender_Ballroom" >
-        </activity>
-        <activity android:name=".Lotus_Hall" >
-        </activity>
-        <activity android:name=".Aquarium_Hall" >
-        </activity>
-        <activity android:name=".MainActivity" >
-
-        </activity>
+        <activity android:name=".PitcherSnacks" />
+        <activity android:name=".HighTea" />
+        <activity android:name=".SpecialOffers" />
+        <activity android:name=".HallReservation" />
+        <activity android:name=".GrandBallroom" />
+        <activity android:name=".Lavender_Ballroom" />
+        <activity android:name=".Lotus_Hall" />
+        <activity android:name=".Aquarium_Hall" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
