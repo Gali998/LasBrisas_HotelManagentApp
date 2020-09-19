@@ -12,10 +12,12 @@
         <activity android:name=".ContactUs">
 
         </activity>
-        <activity android:name=".TripleRoom" />
-        <activity android:name=".EconomyRoom" />
-        <activity android:name=".StandardRoom" />
-        <activity android:name=".FamilyRoom" />
+        <activity android:name=".TripleRoom"
+            android:label="Triple Room"></activity>
+        <activity android:name=".EconomyRoom"
+            android:label="Economy Room"></activity>
+        <activity android:name=".StandardRoom"/>
+        <activity android:name=".FamilyRoom"/>
         <activity android:name=".roomdetails">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

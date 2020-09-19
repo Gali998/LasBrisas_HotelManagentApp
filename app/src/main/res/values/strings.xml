@@ -3,9 +3,9 @@
     <string name="Triple_room">Triple room</string>
     <string name="detail">Triple Room have a minimum of 2 opening windows.with double bed and single bed facilities.and also this room have a small siting area</string>
     <string name="facilities">Room facilities</string>
-    <string name="family_room">Family Room</string>
+    <string name="family_room1">Family Room</string>
     <string name="detail1">family Room offers space and comfort with thoughtful cotempory design and local srilankan touches</string>
-    <string name="economy_room">Economy Room</string>
+    <string name="economy_room1">Economy Room</string>
     <string name="detail2">We have economy rooms available for solo travelers or those wishing to have their own privacy.These are comforatable with a large double bed have their own suits.All have plenty of light and windows are nicely finished.this is most comfortable for  two persons
 </string>
     <string name="msg1">Send Us a Message</string>
@@ -13,6 +13,12 @@
     <string name="Email">Email</string>
     <string name="contcatNo">Contact No</string>
     <string name="message">Message</string>
-    <string name="standard_room">Standard Room</string>
+    <string name="standard_room1">Standard Room</string>
     <string name="detail3">Standard Room have a minimum of 2 opening windows.with double bed facilities.and also this room have a small siting area</string>
+    <string name="facility">Room Facilities</string>
+    <string name="standard_room">Standard Room</string>
+    <string name="economy_room">Economy Room</string>
+    <string name="triple_room">Triple Room</string>
+    <string name="family_room">Family Room</string>
+    <string name="book_now">Book Now</string>
 </resources>
