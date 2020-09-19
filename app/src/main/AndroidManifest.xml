@@ -16,9 +16,12 @@
             android:label="Triple Room"></activity>
         <activity android:name=".EconomyRoom"
             android:label="Economy Room"></activity>
-        <activity android:name=".StandardRoom"/>
-        <activity android:name=".FamilyRoom"/>
-        <activity android:name=".roomdetails">
+        <activity android:name=".StandardRoom"
+        android:label="Standard Room"></activity>
+        <activity android:name=".FamilyRoom"
+            android:label="Family Room"></activity>
+        <activity android:name=".roomdetails"
+            android:label=" Room details">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
