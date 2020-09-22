@@ -1,18 +1,183 @@
 package com.example.hotel;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ContactUs extends AppCompatActivity {
 
+    EditText txtName, txtEmail, txtConNo, txtMessage;
+    Button btnSave, btnShow, btnUpdate, btnDelete;
+    DatabaseReference dbRef;
+    Contact ctd;
+    DataSnapshot dataSnapshot;
+    private void clearControls() {
+        txtName.setText("");
+        txtEmail.setText("");
+        txtConNo.setText("");
+        txtMessage.setText("");
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
+
+        txtName = findViewById(R.id.name1);
+        txtEmail = findViewById(R.id.email);
+        txtConNo = findViewById(R.id.conNo);
+        txtMessage = findViewById(R.id.message);
+
+        btnSave = findViewById(R.id.btnSend);
+        // btnShow = findViewById(R.id.BtnShow);
+        //btnUpdate = findViewById(R.id.btnUpdate);
+       // btnDelete = findViewById(R.id.btnDelete);
+
+        ctd = new Contact();
+
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dbRef = FirebaseDatabase.getInstance().getReference().child("Contact");
+                try {
+                    if (TextUtils.isEmpty(txtName.getText().toString()))
+                        Toast.makeText(ContactUs.this.getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(txtEmail.getText().toString()))
+                        Toast.makeText(ContactUs.this.getApplicationContext(), "Please enter an email", Toast.LENGTH_SHORT).show();
+
+                    else if (TextUtils.isEmpty(txtConNo.getText().toString()))
+                        Toast.makeText(ContactUs.this.getApplicationContext(), "Please enter a contact No", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(txtConNo.getText().toString()))
+                        Toast.makeText(ContactUs.this.getApplicationContext(), "Please enter a Message", Toast.LENGTH_SHORT).show();
+                    else {
+
+                        ctd.setName(txtName.getText().toString().trim());
+                        ctd.setEmail(txtEmail.getText().toString().trim());
+                        ctd.setConNo(Integer.parseInt(txtConNo.getText().toString().trim()));
+                        ctd.setMessage(txtMessage.getText().toString().trim());
+                        dbRef.push().setValue(ctd);
+                        dbRef.child("Ctd1").setValue(ctd);
+                        Toast.makeText(ContactUs.this.getApplicationContext(), "Data Saved Successfully", Toast.LENGTH_SHORT).show();
+                        ContactUs.this.clearControls();
+                    }
+
+                } catch (NumberFormatException e) {
+                    Toast.makeText(ContactUs.this.getApplicationContext(), "Invalid contact Number", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
+
+        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd1");
+        readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.hasChildren()) {
+                    txtName.setText(dataSnapshot.child("name").getValue().toString());
+                    txtEmail.setText(dataSnapshot.child("email").getValue().toString());
+                    txtConNo.setText(dataSnapshot.child("conNo").getValue().toString());
+                    txtMessage.setText(dataSnapshot.child("message").getValue().toString());
+
+                } else
+                    Toast.makeText(getApplicationContext(), "No source to display", Toast.LENGTH_SHORT).show();
+            }
+
+
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+
+        });
+
+
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("Student");
+                upRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.hasChild("Ctd1")) {
+                            try {
+                                ctd.setName(txtName.getText().toString().trim());
+                                ctd.setEmail(txtName.getText().toString().trim());
+                                ctd.setConNo(Integer.parseInt(txtConNo.getText().toString().trim()));
+                                ctd.setMessage(txtMessage.getText().toString().trim());
+
+
+                                dbRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd1");
+                                dbRef.setValue(ctd);
+                                clearControls();
+
+                                Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+
+                            } catch (NumberFormatException e) {
+                                Toast.makeText(getApplicationContext(), "Invalid Contact Number", Toast.LENGTH_SHORT).show();
+                            }
+                        } else
+                            Toast.makeText(getApplicationContext(), "No source to update", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+
+                });
+
+                btnDelete.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Student");
+                        delRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                if (dataSnapshot.hasChild("Ctd1")) {
+
+                                    dbRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd1");
+                                    dbRef.setValue(ctd);
+                                    clearControls();
+
+                                    Toast.makeText(getApplicationContext(), "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
+
+                                } else
+                                    Toast.makeText(getApplicationContext(), "No source to delete", Toast.LENGTH_SHORT).show();
+
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                            }
+
+
+                        });
+
+                    }
+                });
+            }
+        });
     }
+
+
+
     public void onBackPressed()
     {
 

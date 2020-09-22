@@ -146,7 +146,7 @@
         app:layout_constraintVertical_bias="0.773" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#a31aff"
@@ -160,7 +160,7 @@
         app:layout_constraintVertical_bias="0.992" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/email"
         android:layout_width="298dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -171,7 +171,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView15" />
 
     <EditText
-        android:id="@+id/editTextPhone2"
+        android:id="@+id/conNo"
         android:layout_width="295dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -185,7 +185,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView16" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine3"
+        android:id="@+id/message"
         android:layout_width="297dp"
         android:layout_height="72dp"
         android:layout_marginEnd="4dp"
@@ -197,7 +197,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/name1"
         android:layout_width="287dp"
         android:layout_height="49dp"
         android:layout_marginEnd="8dp"

@@ -10,8 +10,8 @@
 
         <EditText
             android:id="@+id/date"
-            android:layout_width="253dp"
-            android:layout_height="49dp"
+            android:layout_width="222dp"
+            android:layout_height="57dp"
             android:layout_centerHorizontal="true"
             android:background="#d4d4d4"
             android:hint="Select Date..."
@@ -113,7 +113,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.705" />
+            app:layout_constraintVertical_bias="0.684" />
 
         <TextView
             android:id="@+id/textView2"
@@ -248,36 +248,41 @@
             app:layout_constraintVertical_bias="0.588" />
 
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="272dp"
+        <EditText
+            android:id="@+id/myEmail"
+            android:layout_width="244dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.58"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/mycontactNo"
+            android:layout_width="255dp"
             android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="phone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.618"
+            app:layout_constraintHorizontal_bias="0.633"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.906" />
+            app:layout_constraintVertical_bias="0.904" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText"
-            android:layout_width="285dp"
-            android:layout_height="43dp"
+        <EditText
+            android:id="@+id/myName"
+            android:layout_width="277dp"
+            android:layout_height="37dp"
+            android:ems="10"
+            android:inputType="textPersonName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintHorizontal_bias="0.679"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.772" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editText2"
-            android:layout_width="280dp"
-            android:layout_height="53dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.609"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.831" />
+            app:layout_constraintVertical_bias="0.766" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
