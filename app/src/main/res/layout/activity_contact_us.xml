@@ -146,15 +146,43 @@
         app:layout_constraintVertical_bias="0.773" />
 
     <Button
-        android:id="@+id/btnSend"
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#a31aff"
-        android:text="Send"
+        android:text="@string/save"
+        android:textColor="#FBF7F7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <Button
+        android:id="@+id/btnUpdated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#a31aff"
+        android:text="@string/update"
         android:textColor="#FBF7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#a31aff"
+        android:text="@string/delete"
+        android:textColor="#FBF7F7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.922"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.992" />
@@ -206,6 +234,8 @@
         android:inputType="textPersonName"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

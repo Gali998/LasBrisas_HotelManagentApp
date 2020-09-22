@@ -25,6 +25,7 @@ public class ContactUs extends AppCompatActivity {
     DatabaseReference dbRef;
     Contact ctd;
     DataSnapshot dataSnapshot;
+
     private void clearControls() {
         txtName.setText("");
         txtEmail.setText("");
@@ -41,10 +42,10 @@ public class ContactUs extends AppCompatActivity {
         txtConNo = findViewById(R.id.conNo);
         txtMessage = findViewById(R.id.message);
 
-        btnSave = findViewById(R.id.btnSend);
+        btnSave = findViewById(R.id.btnSave);
         // btnShow = findViewById(R.id.BtnShow);
-        //btnUpdate = findViewById(R.id.btnUpdate);
-       // btnDelete = findViewById(R.id.btnDelete);
+        btnUpdate = findViewById(R.id.btnUpdated);
+       btnDelete = findViewById(R.id.btnDelete);
 
         ctd = new Contact();
 
@@ -60,7 +61,7 @@ public class ContactUs extends AppCompatActivity {
 
                     else if (TextUtils.isEmpty(txtConNo.getText().toString()))
                         Toast.makeText(ContactUs.this.getApplicationContext(), "Please enter a contact No", Toast.LENGTH_SHORT).show();
-                    else if (TextUtils.isEmpty(txtConNo.getText().toString()))
+                    else if (TextUtils.isEmpty(txtMessage.getText().toString()))
                         Toast.makeText(ContactUs.this.getApplicationContext(), "Please enter a Message", Toast.LENGTH_SHORT).show();
                     else {
 
@@ -110,7 +111,7 @@ public class ContactUs extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("Student");
+                DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("Contact");
                 upRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -146,7 +147,7 @@ public class ContactUs extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Student");
+                        DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Contact");
                         delRef.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

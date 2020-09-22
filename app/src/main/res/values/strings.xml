@@ -21,4 +21,7 @@
     <string name="triple_room">Triple Room</string>
     <string name="family_room">Family Room</string>
     <string name="book_now">Book Now</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
 </resources>

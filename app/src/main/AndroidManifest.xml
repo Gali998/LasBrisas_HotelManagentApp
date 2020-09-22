@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ContactUs">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".TripleRoom"
             android:label="Triple Room"></activity>
@@ -22,11 +26,7 @@
             android:label="Family Room"></activity>
         <activity android:name=".roomdetails"
             android:label=" Room details">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".RoomReservation"
             android:label="RoomReservation"></activity>
