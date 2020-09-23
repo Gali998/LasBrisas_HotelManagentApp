@@ -131,7 +131,7 @@
             app:layout_constraintVertical_bias="0.039" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnBook"
             android:layout_width="168dp"
             android:layout_height="54dp"
             android:background="#a304c9"
