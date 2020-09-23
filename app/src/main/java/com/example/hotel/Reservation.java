@@ -9,7 +9,7 @@ public class Reservation {
     private String spinner3;
     private String name;
     private String email;
-    private String contactNo;
+    private Integer contactNo;
 
     public Reservation() {
     }
@@ -70,11 +70,11 @@ public class Reservation {
         this.email = email;
     }
 
-    public String getContactNo() {
+    public Integer getContactNo() {
         return contactNo;
     }
 
-    public void setContactNo(String contactNo) {
+    public void setContactNo(Integer contactNo) {
         this.contactNo = contactNo;
     }
 }

@@ -274,15 +274,15 @@
 
         <EditText
             android:id="@+id/myName"
-            android:layout_width="277dp"
-            android:layout_height="37dp"
+            android:layout_width="278dp"
+            android:layout_height="57dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.679"
+            app:layout_constraintHorizontal_bias="0.744"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.766" />
+            app:layout_constraintVertical_bias="0.759" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

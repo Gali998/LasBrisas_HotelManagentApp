@@ -32,18 +32,18 @@ public class RoomReservation extends AppCompatActivity implements AdapterView.On
     Button button;
     AlertDialog.Builder builder;
 
-    EditText txtName, txtEmail, txtConNo;
-    Button btnBook, btnShow, btnUpdate, btnDelete;
-    DatabaseReference dbRef;
-    //Rerservation rtd;
-    DataSnapshot dataSnapshot;
+    //EditText txtName, txtEmail, txtConNo;
+    //Button btnBook, btnShow, btnUpdate, btnDelete;
+    //DatabaseReference dbRef2;
+     //Reservation rtd;
+    //DataSnapshot dataSnapshot;
 
-    private void clearControls() {
-        txtName.setText("");
-        txtEmail.setText("");
-        txtConNo.setText("");
+    //private void clearControls() {
+        //txtName.setText("");
+        //txtEmail.setText("");
+        //txtConNo.setText("");
 
-    }
+    //}
     private Spinner spinner;
     private Spinner spinner1;
     private Spinner spinner2;
@@ -57,44 +57,14 @@ public class RoomReservation extends AppCompatActivity implements AdapterView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_reservation);
 
-        txtName = findViewById(R.id.myName);
-        txtEmail = findViewById(R.id.myEmail);
-        txtConNo = findViewById(R.id.mycontactNo);
+        //txtName = findViewById(R.id.myName);
+       // txtEmail = findViewById(R.id.myEmail);
+        //txtConNo = findViewById(R.id.mycontactNo);
 
-       // rtd= new Reservation();
-        btnBook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dbRef = FirebaseDatabase.getInstance().getReference().child("Rerservation");
-                try {
-                    if (TextUtils.isEmpty(txtName.getText().toString()))
-                        Toast.makeText(RoomReservation.this.getApplicationContext(), "Please enter a name", Toast.LENGTH_SHORT).show();
-                    else if (TextUtils.isEmpty(txtEmail.getText().toString()))
-                        Toast.makeText(RoomReservation.this.getApplicationContext(), "Please enter an email", Toast.LENGTH_SHORT).show();
+        //rtd= new Reservation();
 
-                    else if (TextUtils.isEmpty(txtConNo.getText().toString()))
-                        Toast.makeText(RoomReservation.this.getApplicationContext(), "Please enter a contact No", Toast.LENGTH_SHORT).show();
 
-                    else {
-
-                        //rtd.setName(txtName.getText().toString().trim());
-                        //rtd.setEmail(txtEmail.getText().toString().trim());
-                        //rtd.setConNo(Integer.parseInt(txtConNo.getText().toString().trim()));
-
-                        //dbRef.push().setValue(rtd);
-                        //dbRef.child("Rtd1").setValue(rtd);
-                        Toast.makeText(RoomReservation.this.getApplicationContext(), "Data Saved Successfully", Toast.LENGTH_SHORT).show();
-                        RoomReservation.this.clearControls();
-                    }
-
-                } catch (NumberFormatException e) {
-                    Toast.makeText(RoomReservation.this.getApplicationContext(), "Invalid contact Number", Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
-
-        btnBook = findViewById(R.id.btnBook);
+        //btnBook = findViewById(R.id.btnBook);
         button = (Button) findViewById(R.id.btnBook);
         builder = new AlertDialog.Builder(this);
         button.setOnClickListener(new View.OnClickListener() {

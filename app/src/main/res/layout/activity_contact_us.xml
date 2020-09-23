@@ -7,6 +7,20 @@
     tools:context=".ContactUs">
 
 
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="86dp"
+        android:layout_height="38dp"
+        android:background="#a31aff"
+        android:text="@string/show"
+        android:textColor="#FBF7F7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="184dp"
@@ -21,8 +35,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="158dp"
-        android:layout_height="89dp"
+        android:layout_width="205dp"
+        android:layout_height="95dp"
         android:src="@drawable/gen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,8 +48,8 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="179dp"
-        android:layout_height="62dp"
+        android:layout_width="190dp"
+        android:layout_height="90dp"
         android:src="@drawable/hall"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,8 +61,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="201dp"
-        android:layout_height="75dp"
+        android:layout_width="197dp"
+        android:layout_height="77dp"
         android:background="#F8F1F1"
         android:src="@drawable/spa"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +75,7 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="175dp"
+        android:layout_width="200dp"
         android:layout_height="74dp"
         android:src="@drawable/res"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -147,42 +161,42 @@
 
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="85dp"
+        android:layout_height="36dp"
         android:background="#a31aff"
         android:text="@string/save"
         android:textColor="#FBF7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.992" />
+        app:layout_constraintVertical_bias="0.989" />
 
     <Button
         android:id="@+id/btnUpdated"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="38dp"
         android:background="#a31aff"
         android:text="@string/update"
         android:textColor="#FBF7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.992" />
 
     <Button
         android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
         android:background="#a31aff"
         android:text="@string/delete"
         android:textColor="#FBF7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.922"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.992" />

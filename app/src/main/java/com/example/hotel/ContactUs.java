@@ -43,7 +43,7 @@ public class ContactUs extends AppCompatActivity {
         txtMessage = findViewById(R.id.message);
 
         btnSave = findViewById(R.id.btnSave);
-        // btnShow = findViewById(R.id.BtnShow);
+        btnShow = findViewById(R.id.btnShow);
         btnUpdate = findViewById(R.id.btnUpdated);
        btnDelete = findViewById(R.id.btnDelete);
 
@@ -70,7 +70,7 @@ public class ContactUs extends AppCompatActivity {
                         ctd.setConNo(Integer.parseInt(txtConNo.getText().toString().trim()));
                         ctd.setMessage(txtMessage.getText().toString().trim());
                         dbRef.push().setValue(ctd);
-                        dbRef.child("Ctd1").setValue(ctd);
+                        dbRef.child("Ctd2").setValue(ctd);
                         Toast.makeText(ContactUs.this.getApplicationContext(), "Data Saved Successfully", Toast.LENGTH_SHORT).show();
                         ContactUs.this.clearControls();
                     }
@@ -82,8 +82,10 @@ public class ContactUs extends AppCompatActivity {
             }
         });
 
-
-        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd1");
+        btnShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd2");
         readRef.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
@@ -115,7 +117,7 @@ public class ContactUs extends AppCompatActivity {
                 upRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.hasChild("Ctd1")) {
+                        if (dataSnapshot.hasChild("Ctd2")) {
                             try {
                                 ctd.setName(txtName.getText().toString().trim());
                                 ctd.setEmail(txtName.getText().toString().trim());
@@ -123,7 +125,7 @@ public class ContactUs extends AppCompatActivity {
                                 ctd.setMessage(txtMessage.getText().toString().trim());
 
 
-                                dbRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd1");
+                                dbRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd2");
                                 dbRef.setValue(ctd);
                                 clearControls();
 
@@ -151,9 +153,9 @@ public class ContactUs extends AppCompatActivity {
                         delRef.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                if (dataSnapshot.hasChild("Ctd1")) {
+                                if (dataSnapshot.hasChild("Ctd2")) {
 
-                                    dbRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd1");
+                                    dbRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd2");
                                     dbRef.setValue(ctd);
                                     clearControls();
 
@@ -176,6 +178,7 @@ public class ContactUs extends AppCompatActivity {
             }
         });
     }
+
 
 
 
@@ -243,5 +246,7 @@ public class ContactUs extends AppCompatActivity {
 
         // Show the Alert Dialog box
         alertDialog.show();
+    }
+});
     }
 }
