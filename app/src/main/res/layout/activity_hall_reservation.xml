@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.146" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/hname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -118,7 +118,7 @@
         app:layout_constraintVertical_bias="0.426" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/guest"
         android:layout_width="203dp"
         android:layout_height="45dp"
         android:ems="10"
@@ -144,7 +144,7 @@
         app:layout_constraintVertical_bias="0.523" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/time"
         android:layout_width="201dp"
         android:layout_height="41dp"
         android:ems="10"
@@ -170,7 +170,7 @@
         app:layout_constraintVertical_bias="0.623" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/guestN"
         android:layout_width="196dp"
         android:layout_height="43dp"
         android:ems="10"
@@ -196,7 +196,7 @@
         app:layout_constraintVertical_bias="0.715" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/conNo"
         android:layout_width="196dp"
         android:layout_height="38dp"
         android:ems="10"
@@ -235,7 +235,7 @@
         app:layout_constraintVertical_bias="0.821" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/email"
         android:layout_width="195dp"
         android:layout_height="42dp"
         android:layout_marginBottom="124dp"
@@ -260,7 +260,7 @@
         app:layout_constraintVertical_bias="0.907" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine9"
+        android:id="@+id/addr"
         android:layout_width="189dp"
         android:layout_height="38dp"
         android:layout_marginEnd="24dp"

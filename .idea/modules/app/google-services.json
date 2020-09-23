@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "932514634846",
+    "firebase_url": "https://hallresrvation.firebaseio.com",
+    "project_id": "hallresrvation",
+    "storage_bucket": "hallresrvation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932514634846:android:8f33cabf4da3093a6ba8cf",
+        "android_client_info": {
+          "package_name": "com.example.hallresrvation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932514634846-8l3709kvka94e5062ftdkqv095gv8fqv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hallresrvation",
+            "certificate_hash": "2e5c94ecc8b15f8c1b8d3a48b041ca4c218f158a"
+          }
+        },
+        {
+          "client_id": "932514634846-mqnv3goa36rhvfet5gg5vii8bdqkql15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0tH5KilxXaA6KB3ucifYnVysHkL1hVls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932514634846-mqnv3goa36rhvfet5gg5vii8bdqkql15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
