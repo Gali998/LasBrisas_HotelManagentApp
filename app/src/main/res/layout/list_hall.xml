@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hallName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hallName"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/eventType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="eventType"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+
+   <androidx.appcompat.widget.AppCompatTextView
+       android:id="@+id/NoGuest"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="NoGuest"
+       android:textSize="18sp"
+       android:layout_marginVertical="5dp"
+    />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/timeE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="eventTime"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/NameGuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NameGuest"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ContactNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ContactNo"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+</LinearLayout>

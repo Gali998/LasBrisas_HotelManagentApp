@@ -14,6 +14,27 @@ public class Hall {
     public Hall() {
     }
 
+    public Hall(String hallName, String typeEvent, String noOfGuest, String time, String guestName, String contactNo, String email, String address) {
+        HallName = hallName;
+        TypeEvent = typeEvent;
+        NoOfGuest = noOfGuest;
+        this.time = time;
+        GuestName = guestName;
+        this.contactNo = contactNo;
+        this.email = email;
+        this.address = address;
+    }
+
+    public Hall(String hallName, String noOfGuest, String time, String guestName, String contactNo, String email, String address) {
+        HallName = hallName;
+        NoOfGuest = noOfGuest;
+        this.time = time;
+        GuestName = guestName;
+        this.contactNo = contactNo;
+        this.email = email;
+        this.address = address;
+    }
+
     public Hall(String hallName, String typeEvent, String date, String noOfGuest, String time, String guestName, String contactNo, String email, String address) {
         HallName = hallName;
         TypeEvent = typeEvent;

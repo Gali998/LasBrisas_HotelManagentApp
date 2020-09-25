@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">hallResrvation</string>
+    <string name="app_name">LAS BRISAS</string>
     <string name="trust_our_splendid_conference_hall_to_success_your_event_to_hold_a_grand_conference_with_graceful_manner_make_a_everlasting_impression_on_your_business_partner_grab_the_chance_to_make_marvelous_event">Trust our splendid conference hall to success your event.To hold a grand conference with graceful manner.Make a everlasting impression on your business partner.Grab the chance to make marvelous event.</string>
     <string name="facilities_capacity_up_to_100_private_board_room_natural_lights_free_wifi"><![CDATA[Facilities \n->Capacity up to 100 \n->Private Board Room \n->Natural Lights \n->Free Wifi]]></string>
     <string name="banquet_conference_request_form"><![CDATA[Banquet & Conference Request Form]]></string>
@@ -18,4 +18,8 @@
     <string name="conference"><![CDATA[Facilities\n ->Capacity up to 60\n ->Private board room \n->private garden]]></string>
     <string name="restaurant_bar"><![CDATA[Restaurant & Bar >]]></string>
     <string name="famous_high_tea_is_back_now_come_join_us_buffed_price_at_rs_1800_net_per_person">Famous high tea is back now.Come join us.Buffed price at Rs.1800/= net per person</string>
+    <array name="eventType">
+        <item>Wedding</item>
+        <item>Business</item>
+    </array>
 </resources>

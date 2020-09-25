@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,30 +22,30 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
-public class HallReservation extends AppCompatActivity  implements
-        AdapterView.OnItemSelectedListener {
+public class HallReservation extends AppCompatActivity{
 
 
     DatabaseReference dbRef;
 
-    EditText hallName,NoOfG,GuestN,conNo,email1,add;
+    EditText hallName, NoOfG, GuestN, conNo, email1, add;
     EditText date;
     DatePickerDialog datePickerDialog;
     EditText time1;
-    Button button;
+    Button button,btn2;
     AlertDialog.Builder builder;
-    private Spinner spinner;
-    String[] tevent = { "wedding", "business"};
-    //private static final String[] paths = {"wedding", "business"};
+    Spinner spinner1;
+
     Hall hall;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hall_reservation);
+        hall = new Hall();
 
         hallName = findViewById(R.id.hname);
-        //tevent = findViewById(R.id.spinner);
+        button = findViewById(R.id.button);
+        spinner1= findViewById(R.id.spinner);
         date = findViewById(R.id.date);
         NoOfG = findViewById(R.id.guest);
         time1 = findViewById(R.id.time);
@@ -52,16 +54,8 @@ public class HallReservation extends AppCompatActivity  implements
         email1 = findViewById(R.id.email);
         add = findViewById(R.id.addr);
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Hall");
-        //Getting the instance of Spinner and applying OnItemSelectedListener on it
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(this);
 
-        //Creating the ArrayAdapter instance having the country list
-        ArrayAdapter aa = new ArrayAdapter(this, android.R.layout.simple_spinner_item, tevent);
-        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //Setting the ArrayAdapter data on the Spinner
-        spinner.setAdapter(aa);
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Hall");
 
         // initiate the date picker and a button
         date = (EditText) findViewById(R.id.date);
@@ -93,12 +87,24 @@ public class HallReservation extends AppCompatActivity  implements
 
         });
 
+        //To view the hall details
+        btn2 = (Button) findViewById(R.id.showHall);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HallReservation.this,RetrieveHallDetails.class );
+                startActivity(intent);
+
+            }
+        });
+
+        //To book the hall
         button = (Button) findViewById(R.id.button);
         builder = new AlertDialog.Builder(this);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             insertHallData();
+                insertHallData();
                 //Uncomment the below code to Set the message and title from the strings.xml file
 
 
@@ -120,6 +126,7 @@ public class HallReservation extends AppCompatActivity  implements
                                         Toast.LENGTH_SHORT).show();
                             }
                         });
+
                 //Creating dialog box
                 AlertDialog alert = builder.create();
                 //Setting the title manually
@@ -131,33 +138,24 @@ public class HallReservation extends AppCompatActivity  implements
     }
 
 
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-        Toast.makeText(getApplicationContext(),tevent[i] , Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
-
-    private void insertHallData(){
-
+    private void insertHallData() {
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Hall");
         String HallName = hallName.getText().toString();
-        String TypeEvent =spinner.getSelectedItem().toString();
-        String date =datePickerDialog.getDatePicker().toString();
-        String NoOfGuest =NoOfG.getText().toString();
-        String time =time1.getText().toString();
-        String GuestName=GuestN.getText().toString();
-        String contactNo=conNo.getText().toString();
-        String email=email1.getText().toString();
-        String address=add.getText().toString();
+        String TypeEvent =spinner1.getSelectedItem().toString();
+        //String date = datePickerDialog.getDatePicker().toString();
+        String NoOfGuest = NoOfG.getText().toString();
+        String time = time1.getText().toString();
+        String GuestName = GuestN.getText().toString();
+        String contactNo = conNo.getText().toString();
+        String email = email1.getText().toString();
+        String address = add.getText().toString();
 
-        Hall hall = new Hall(HallName,TypeEvent,date,NoOfGuest,time,GuestName,contactNo,email,address);
+       // Log.d("typevent", "insertHallData: " +TypeEvent);
+
+        Hall hall = new Hall(HallName,TypeEvent, NoOfGuest, time, GuestName, contactNo, email, address);
 
         dbRef.push().setValue(hall);
-        Toast.makeText(HallReservation.this,"Data Inserted Successfully",Toast.LENGTH_SHORT).show();
+        Toast.makeText(HallReservation.this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
     }
 
 }
