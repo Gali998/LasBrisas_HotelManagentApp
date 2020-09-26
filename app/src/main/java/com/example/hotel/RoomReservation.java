@@ -7,7 +7,6 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,60 +16,55 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
-public class RoomReservation extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class RoomReservation extends AppCompatActivity   {
+    DatabaseReference dbRef;
 
+    EditText  norooms,noadults,nokids,name1, email1, ConNo;
     EditText date;
     EditText date2;
     DatePickerDialog datePickerDialog;
     DatePickerDialog datePickerDialog1;
     Button button;
+
+
     AlertDialog.Builder builder;
+   Reservation reservation;
 
-    //EditText txtName, txtEmail, txtConNo;
-    //Button btnBook, btnShow, btnUpdate, btnDelete;
-    //DatabaseReference dbRef2;
-     //Reservation rtd;
-    //DataSnapshot dataSnapshot;
 
-    //private void clearControls() {
-        //txtName.setText("");
-        //txtEmail.setText("");
-        //txtConNo.setText("");
-
-    //}
-    private Spinner spinner;
-    private Spinner spinner1;
-    private Spinner spinner2;
-
-    private static final String[] paths = {"2", "4", "5 or more"};
-    private static final String[] paths1 = {"2", "4", "5 or more"};
-    private static final String[] paths2 = {"1", "2", "3"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_reservation);
 
-        //txtName = findViewById(R.id.myName);
-       // txtEmail = findViewById(R.id.myEmail);
-        //txtConNo = findViewById(R.id.mycontactNo);
+        reservation = new Reservation();
+        date = findViewById(R.id.date);
+        date2 = findViewById(R.id.date2);
+        norooms = findViewById(R.id.rooms);
+        noadults = findViewById(R.id.adults1);
+        nokids = findViewById(R.id.kids);
+        name1 = findViewById(R.id.myName);
+        email1 = findViewById(R.id.myEmail);
+        ConNo = findViewById(R.id.mycontactNo);
 
-        //rtd= new Reservation();
+
+        //tevent = findViewById(R.id.spinner);
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Reservation");
 
 
         //btnBook = findViewById(R.id.btnBook);
         button = (Button) findViewById(R.id.btnBook);
         builder = new AlertDialog.Builder(this);
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-
+                insertReservationData();
                 //Uncomment the below code to Set the message and title from the strings.xml file
 
 
@@ -80,7 +74,7 @@ public class RoomReservation extends AppCompatActivity implements AdapterView.On
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 finish();
-                                Toast.makeText(getApplicationContext(),"you choose yes action for alertbox",
+                                Toast.makeText(getApplicationContext(), "you choose yes action for alertbox",
                                         Toast.LENGTH_SHORT).show();
                             }
                         })
@@ -88,7 +82,7 @@ public class RoomReservation extends AppCompatActivity implements AdapterView.On
                             public void onClick(DialogInterface dialog, int id) {
                                 //  Action for 'NO' Button
                                 dialog.cancel();
-                                Toast.makeText(getApplicationContext(),"you choose no action for alertbox",
+                                Toast.makeText(getApplicationContext(), "you choose no action for alertbox",
                                         Toast.LENGTH_SHORT).show();
                             }
                         });
@@ -104,7 +98,7 @@ public class RoomReservation extends AppCompatActivity implements AdapterView.On
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // calender class's instance and get current date , month and year from calender
+// calender class's instance and get current date , month and year from calender
                 final Calendar c = Calendar.getInstance();
                 int mYear = c.get(Calendar.YEAR); // current year
                 int mMonth = c.get(Calendar.MONTH); // current month
@@ -129,7 +123,7 @@ public class RoomReservation extends AppCompatActivity implements AdapterView.On
         date2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // calender class's instance and get current date , month and year from calender
+// calender class's instance and get current date , month and year from calender
                 final Calendar c = Calendar.getInstance();
                 int mYear = c.get(Calendar.YEAR); // current year
                 int mMonth = c.get(Calendar.MONTH); // current month
@@ -149,59 +143,38 @@ public class RoomReservation extends AppCompatActivity implements AdapterView.On
                 datePickerDialog1.show();
             }
         });
-        spinner = (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(RoomReservation.this,
-                android.R.layout.simple_spinner_item, paths);
-
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
-
-        spinner1 = (Spinner) findViewById(R.id.spinner1);
-        adapter = new ArrayAdapter<String>(RoomReservation.this,
-                android.R.layout.simple_spinner_item, paths1);
-
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter);
-        spinner1.setOnItemSelectedListener(this);
-
-        spinner2 = (Spinner) findViewById(R.id.spinner2);
-        adapter = new ArrayAdapter<String>(RoomReservation.this,
-                android.R.layout.simple_spinner_item, paths2);
-
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner2.setAdapter(adapter);
-        spinner2.setOnItemSelectedListener(this);
 
 
     }
+    //Performing action onItemSelected and onNothing selected
+    private void insertReservationData(){
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Reservation");
+        //String date1 =datePickerDialog.getDatePicker().toString();
+       //String date2 =datePickerDialog1.getDatePicker().toString();
+        String rooms =norooms.getText().toString();
+        String adults=noadults.getText().toString();
+        String kids=nokids.getText().toString();
+        String name=name1.getText().toString();
+        String email=email1.getText().toString();
+        String contactNo=ConNo.getText().toString();
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
-
-        switch (position) {
-            case 0:
-                // Whatever you want to happen when the first item gets selected
-                break;
-            case 1:
-                // Whatever you want to happen when the second item gets selected
-                break;
-            case 2:
-                // Whatever you want to happen when the thrid item gets selected
-                break;
-
-        }
-    }
-
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-        // TODO Auto-generated method stub
+        //Reservation reservation = new Reservation( date1,date2,rooms,adults,kids,name,email,contactNo);
+        Reservation reservation = new Reservation( rooms,adults,kids,name,email,contactNo);
+        dbRef.push().setValue(reservation);
+        Toast.makeText(RoomReservation.this,"Data Inserted Successfully",Toast.LENGTH_SHORT).show();
     }
 
 
 
 }
+
+
+
+
+
+
+
+
 
 
 

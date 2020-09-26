@@ -25,4 +25,21 @@
     <string name="delete">Delete</string>
     <string name="save">Save</string>
     <string name="show">Show</string>
+    <string name="noofrooms">No of rooms</string>
+    <string name="no_of_kids">NoOfKids</string>
+    <array name="noofrooms">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </array>
+    <array name="noofadults">
+        <item>2</item>
+        <item>4</item>
+        <item>5 or more</item>
+    </array>
+    <array name="noofkids">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </array>
 </resources>

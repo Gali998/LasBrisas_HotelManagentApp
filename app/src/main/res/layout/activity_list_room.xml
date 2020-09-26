@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".ListRoom">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/checkIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="checkIn"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/checkOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:text="checkOut"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/NoOfRooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NoOfRooms"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/noOfKids"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="noOfkids"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/noOfAdults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="noOfadults"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/Name7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/Email3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ContactNo3"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:text="ContactNo"
+        android:textSize="18sp" />
+</LinearLayout>

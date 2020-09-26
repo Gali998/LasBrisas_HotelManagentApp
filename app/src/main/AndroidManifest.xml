@@ -9,28 +9,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ContactUs"
-            android:label="Contact Us">
+        <activity android:name=".update_room_reservation"></activity>
+        <activity android:name=".ListRoom" />
+        <activity android:name=".Retrieve_room_details" />
+        <activity
+            android:name=".ContactUs"
+            android:label="Contact Us" />
+        <activity
+            android:name=".TripleRoom"
+            android:label="Triple Room" />
+        <activity
+            android:name=".EconomyRoom"
+            android:label="Economy Room" />
+        <activity
+            android:name=".StandardRoom"
+            android:label="Standard Room" />
+        <activity
+            android:name=".FamilyRoom"
+            android:label="Family Room" />
+        <activity
+            android:name=".roomdetails"
+            android:label=" Room details">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TripleRoom"
-            android:label="Triple Room"></activity>
-        <activity android:name=".EconomyRoom"
-            android:label="Economy Room"></activity>
-        <activity android:name=".StandardRoom"
-        android:label="Standard Room"></activity>
-        <activity android:name=".FamilyRoom"
-            android:label="Family Room"></activity>
-        <activity android:name=".roomdetails"
-            android:label=" Room details">
-
-        </activity>
-        <activity android:name=".RoomReservation"
-            android:label="RoomReservation"></activity>
+        <activity
+            android:name=".RoomReservation"
+            android:label="RoomReservation" />
         <activity android:name=".MainActivity" />
     </application>
 
