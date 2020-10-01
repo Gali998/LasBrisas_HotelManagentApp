@@ -6,10 +6,15 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -33,7 +38,7 @@ public class ImgAdapter extends RecyclerView.Adapter<ImgAdapter.ImgViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ImgViewHolder holder, int position) {
-       Hall hallCurrent = mUploads.get(position);
+       final Hall hallCurrent = mUploads.get(position);
        holder.HName.setText(hallCurrent.getHallName());
        holder.EType.setText(hallCurrent.getTypeEvent());
        holder.NG.setText(hallCurrent.getNoOfGuest());
@@ -43,6 +48,16 @@ public class ImgAdapter extends RecyclerView.Adapter<ImgAdapter.ImgViewHolder> {
        holder.Email1.setText(hallCurrent.getEmail());
        holder.Adr.setText(hallCurrent.getAddress());
 
+       //set a button to delete records
+
+       holder.delBtn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               DatabaseReference db = FirebaseDatabase.getInstance().getReference("HallReservation").child(hallCurrent.getKey());
+               db.removeValue();
+               Toast.makeText(mContext,"data Deleted",Toast.LENGTH_SHORT).show();
+           }
+       });
     }
 
     @Override
@@ -54,7 +69,7 @@ public class ImgAdapter extends RecyclerView.Adapter<ImgAdapter.ImgViewHolder> {
             View.OnCreateContextMenuListener, MenuItem.OnMenuItemClickListener {
 
         public TextView HName,EType,NG,Time,GName,CN,Email1,Adr;
-
+        Button delBtn;
         public ImgViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -66,6 +81,7 @@ public class ImgAdapter extends RecyclerView.Adapter<ImgAdapter.ImgViewHolder> {
             CN = itemView.findViewById(R.id.CN);
             Email1 = itemView.findViewById(R.id.Email1);
             Adr = itemView.findViewById(R.id.Adr);
+            delBtn = itemView.findViewById(R.id.delBtn);
 
             itemView.setOnClickListener(this);
             itemView.setOnCreateContextMenuListener(this);
