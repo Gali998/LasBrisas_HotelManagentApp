@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RetrieveHallDetails"></activity>
+        <activity android:name=".ItemListHall"></activity>
         <activity
-            android:name=".TestInsert"
+            android:name=".RetrieveHallDetails"
             android:exported="true" />
+        <activity android:name=".TestInsert" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

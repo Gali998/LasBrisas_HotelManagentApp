@@ -1,15 +1,17 @@
 package com.example.hallresrvation;
 
+import com.google.firebase.database.Exclude;
+
 public class Hall {
     private String HallName;
     private String TypeEvent;
-    private String date;
     private  String NoOfGuest;
     private String time;
     private String GuestName;
     private String contactNo;
     private String email;
     private String address;
+    private String mKey;
 
     public Hall() {
     }
@@ -35,17 +37,6 @@ public class Hall {
         this.address = address;
     }
 
-    public Hall(String hallName, String typeEvent, String date, String noOfGuest, String time, String guestName, String contactNo, String email, String address) {
-        HallName = hallName;
-        TypeEvent = typeEvent;
-        this.date = date;
-        NoOfGuest = noOfGuest;
-        this.time = time;
-        GuestName = guestName;
-        this.contactNo = contactNo;
-        this.email = email;
-        this.address = address;
-    }
 
     public String getGuestName() {
         return GuestName;
@@ -69,14 +60,6 @@ public class Hall {
 
     public void setTypeEvent(String typeEvent) {
         TypeEvent = typeEvent;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 
     public String getNoOfGuest() {
@@ -118,4 +101,15 @@ public class Hall {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    @Exclude
+    public String getKey(){
+        return mKey;
+    }
+
+    @Exclude
+    public void setKey(String key){
+      mKey = key;
+    }
+
 }

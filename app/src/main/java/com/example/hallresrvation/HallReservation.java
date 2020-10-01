@@ -55,7 +55,7 @@ public class HallReservation extends AppCompatActivity{
         add = findViewById(R.id.addr);
 
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Hall");
+        dbRef = FirebaseDatabase.getInstance().getReference().child("HallReservation");
 
         // initiate the date picker and a button
         date = (EditText) findViewById(R.id.date);
@@ -92,9 +92,9 @@ public class HallReservation extends AppCompatActivity{
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HallReservation.this,RetrieveHallDetails.class );
-                startActivity(intent);
-
+                //Intent intent = new Intent(HallReservation.this,RetrieveHallDetails.class );
+                //startActivity(intent);
+                openActivity();
             }
         });
 
@@ -139,7 +139,7 @@ public class HallReservation extends AppCompatActivity{
 
 
     private void insertHallData() {
-        dbRef = FirebaseDatabase.getInstance().getReference().child("Hall");
+        dbRef = FirebaseDatabase.getInstance().getReference().child("HallReservation");
         String HallName = hallName.getText().toString();
         String TypeEvent =spinner1.getSelectedItem().toString();
         //String date = datePickerDialog.getDatePicker().toString();
@@ -158,4 +158,9 @@ public class HallReservation extends AppCompatActivity{
         Toast.makeText(HallReservation.this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();
     }
 
+    private void openActivity(){
+        Intent intent = new Intent(this,ItemListHall.class);
+        startActivity(intent);
+
+    }
 }
