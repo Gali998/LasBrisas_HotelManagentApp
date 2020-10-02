@@ -7,19 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class NavigateHall extends AppCompatActivity {
 
     Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_navigate_hall);
 
         button  = (Button) findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, HallReservation.class);
+                Intent intent = new Intent(NavigateHall.this, HallReservation.class);
                 startActivity(intent);
 
             }
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Aquarium_Hall.class);
+                Intent intent = new Intent(NavigateHall.this, Aquarium_Hall.class);
                 startActivity(intent);
 
             }
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Lotus_Hall.class);
+                Intent intent = new Intent(NavigateHall.this, Lotus_Hall.class);
                 startActivity(intent);
 
             }
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Lavender_Ballroom.class);
+                Intent intent = new Intent(NavigateHall.this, Lavender_Ballroom.class);
                 startActivity(intent);
 
             }
@@ -55,11 +55,12 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, GrandBallroom.class);
+                Intent intent = new Intent(NavigateHall.this, GrandBallroom.class);
                 startActivity(intent);
 
             }
         });
 
     }
-}
+    }
+

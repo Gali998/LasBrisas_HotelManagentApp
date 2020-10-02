@@ -46,7 +46,7 @@ public class HallReservation extends AppCompatActivity{
         hallName = findViewById(R.id.hname);
         button = findViewById(R.id.button);
         spinner1= findViewById(R.id.spinner);
-        date = findViewById(R.id.date);
+        //date = findViewById(R.id.date);
         NoOfG = findViewById(R.id.guest);
         time1 = findViewById(R.id.time);
         GuestN = findViewById(R.id.guestN);
@@ -58,9 +58,9 @@ public class HallReservation extends AppCompatActivity{
         dbRef = FirebaseDatabase.getInstance().getReference().child("HallReservation");
 
         // initiate the date picker and a button
-        date = (EditText) findViewById(R.id.date);
+        //date = (EditText) findViewById(R.id.date);
         // perform click event on edit text
-        date.setOnClickListener(new View.OnClickListener() {
+        /*date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // calender class's instance and get current date , month and year from calender
@@ -85,7 +85,7 @@ public class HallReservation extends AppCompatActivity{
             }
 
 
-        });
+        });*/
 
         //To view the hall details
         btn2 = (Button) findViewById(R.id.showHall);

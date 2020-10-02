@@ -9,17 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ItemListHall"></activity>
+        <activity android:name=".NavigateHall"></activity>
+        <activity android:name=".Dashboard2" />
+        <activity android:name=".HomeDashboard" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".ItemListHall" />
         <activity
             android:name=".RetrieveHallDetails"
             android:exported="true" />
         <activity android:name=".TestInsert" />
         <activity android:name=".SplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".HomePage" />
         <activity android:name=".PitcherSnacks" />
@@ -32,7 +36,6 @@
         <activity android:name=".Lavender_Ballroom" />
         <activity android:name=".Lotus_Hall" />
         <activity android:name=".Aquarium_Hall" />
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

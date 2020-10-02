@@ -35,7 +35,7 @@ public class TestInsert extends AppCompatActivity {
         hallName = findViewById(R.id.hname);
         button = findViewById(R.id.button);
         spinner = findViewById(R.id.spinner);
-        date1 = findViewById(R.id.date);
+        //date1 = findViewById(R.id.date);
         NoOfG = findViewById(R.id.guest);
         time1 = findViewById(R.id.time);
         GuestN = findViewById(R.id.guestN);

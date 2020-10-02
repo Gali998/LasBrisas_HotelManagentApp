@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conL1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tt25"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="LAS BRISAS"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="336dp"
+            android:layout_height="173dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tt25" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/a2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/dining"
+                        android:layout_width="118dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="22dp"
+                        app:srcCompat="@drawable/p2"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        android:id="@+id/tV3"
+                        android:layout_width="129dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dining"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="99dp"
+                        android:layout_marginLeft="99dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="89dp"
+                        android:layout_marginRight="89dp"
+                        android:gravity="center_horizontal"
+                        android:text="DINING"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="336dp"
+            android:layout_height="173dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l1" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/a1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/hall"
+                        android:layout_width="118dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="22dp"
+                        app:srcCompat="@drawable/w1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        android:id="@+id/tV4"
+                        android:layout_width="129dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hall"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="99dp"
+                        android:layout_marginLeft="99dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="89dp"
+                        android:layout_marginRight="89dp"
+                        android:gravity="center_horizontal"
+                        android:text="HALL"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l3"
+            android:layout_width="336dp"
+            android:layout_height="173dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l2" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/a3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/rooms"
+                        android:layout_width="118dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="22dp"
+                        app:srcCompat="@drawable/r1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        android:id="@+id/tV5"
+                        android:layout_width="129dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rooms"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="99dp"
+                        android:layout_marginLeft="99dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="89dp"
+                        android:layout_marginRight="89dp"
+                        android:gravity="center_horizontal"
+                        android:text="ROOMS"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l4"
+            android:layout_width="337dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l3">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/a4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/spa"
+                        android:layout_width="118dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="22dp"
+                        app:srcCompat="@drawable/s1" />
+
+                    <TextView
+                        android:id="@+id/tV6"
+                        android:layout_width="129dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/spa"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="99dp"
+                        android:layout_marginLeft="99dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="89dp"
+                        android:layout_marginRight="89dp"
+                        android:gravity="center_horizontal"
+                        android:text="SPA"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l5"
+            android:layout_width="337dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l4">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/a5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/offer"
+                        android:layout_width="118dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="22dp"
+                        app:srcCompat="@drawable/b1" />
+
+                    <TextView
+                        android:id="@+id/tV7"
+                        android:layout_width="129dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/offer"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="99dp"
+                        android:layout_marginLeft="99dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="89dp"
+                        android:layout_marginRight="89dp"
+                        android:gravity="center_horizontal"
+                        android:text="OFFERS"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l6"
+            android:layout_width="337dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l5">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/a6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/gallery"
+                        android:layout_width="118dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="22dp"
+                        app:srcCompat="@drawable/s2" />
+
+                    <TextView
+                        android:id="@+id/tV8"
+                        android:layout_width="129dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/gallery"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="99dp"
+                        android:layout_marginLeft="99dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="89dp"
+                        android:layout_marginRight="89dp"
+                        android:gravity="center_horizontal"
+                        android:text="GALLERY"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l7"
+            android:layout_width="337dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l6">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/a7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/conus"
+                        android:layout_width="118dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="22dp"
+                        app:srcCompat="@drawable/s3" />
+
+                    <TextView
+                        android:id="@+id/tV9"
+                        android:layout_width="129dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/conus"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="99dp"
+                        android:layout_marginLeft="99dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="89dp"
+                        android:layout_marginRight="89dp"
+                        android:gravity="center_horizontal"
+                        android:text="CONTACT US"
+                        android:textAlignment="center"
+                        android:textColor="#000"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
