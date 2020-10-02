@@ -47,7 +47,16 @@ public class Feedback extends AppCompatActivity {
         butDelete = findViewById(R.id.button8);
 
         cus = new CusFeedback();
-       
+        butDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dbRef = FirebaseDatabase.getInstance().getReference().child("CusFeedback").child("cus1");
+                dbRef.removeValue();
+                Toast.makeText(getApplicationContext(),"Successfully deleted",Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 
         butUpdate.setOnClickListener(new View.OnClickListener() {
