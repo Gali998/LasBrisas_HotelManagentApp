@@ -65,6 +65,35 @@ public class Spa extends AppCompatActivity implements AdapterView.OnItemSelected
         spack = new SpaPackage();
 
        
+        butShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbRef = FirebaseDatabase.getInstance().getReference().child("SpaPackage/spack2");
+
+                dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.hasChildren()){
+                            txtName.setText(dataSnapshot.child("name").getValue().toString());
+                            txtPhone.setText(dataSnapshot.child("phoneNo").getValue().toString());
+                           // txtPackage.setOnItemSelectedListener(dataSnapshot.child("packName").getValue().toString());
+                            txtDate.setText(dataSnapshot.child("date").getValue().toString());
+                            txtTime.setText(dataSnapshot.child("time").getValue().toString());
+
+
+                        }
+                        else
+                            Toast.makeText(getApplicationContext(),"Cannot find spack2",Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+
+                });
+            }
+        });
 
 
         butBooking.setOnClickListener(new View.OnClickListener()
