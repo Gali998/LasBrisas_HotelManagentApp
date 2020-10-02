@@ -64,7 +64,18 @@ public class Spa extends AppCompatActivity implements AdapterView.OnItemSelected
 
         spack = new SpaPackage();
 
-      
+        butDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dbRef = FirebaseDatabase.getInstance().getReference().child("SpaPackage").child("spack2");
+                dbRef.removeValue();
+                Toast.makeText(getApplicationContext(),"Successfully deleted",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
         butUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
