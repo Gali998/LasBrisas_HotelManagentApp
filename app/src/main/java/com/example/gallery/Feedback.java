@@ -47,7 +47,36 @@ public class Feedback extends AppCompatActivity {
         butDelete = findViewById(R.id.button8);
 
         cus = new CusFeedback();
-      
+     
+
+        butShow.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View v) {
+    dbRef = FirebaseDatabase.getInstance().getReference().child("CusFeedback/cus1");
+    dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+    @Override
+    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+        if(dataSnapshot.hasChildren()){
+            txtName.setText(dataSnapshot.child("name").getValue().toString());
+            txtEmail.setText(dataSnapshot.child("email").getValue().toString());
+            txtFeedback.setText(dataSnapshot.child("feedback").getValue().toString());
+            rating.setRating(Float.parseFloat(dataSnapshot.child("rating").getValue().toString()));
+
+        }
+        else
+            Toast.makeText(getApplicationContext(),"Cannot find Cus1",Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+    }
+});
+
+                                       }
+                                   });
+
+
         butSend.setOnClickListener(new View.OnClickListener()
 
             {
