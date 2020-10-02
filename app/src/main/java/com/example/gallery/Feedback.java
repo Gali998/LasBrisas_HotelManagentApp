@@ -25,9 +25,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Feedback extends AppCompatActivity {
 
-    Button butDelete, butShow, butUpdate, butSend;
+    Button butDelete,butShow,butUpdate,butSend;
 
-    EditText txtName, txtEmail, txtFeedback;
+    EditText txtName,txtEmail,txtFeedback;
     RatingBar rating;
     DatabaseReference dbRef;
     CusFeedback cus;
@@ -36,6 +36,54 @@ public class Feedback extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
+        txtName = findViewById(R.id.edinput1);
+        txtEmail = findViewById(R.id.edinput2);
+        txtFeedback = findViewById(R.id.edinput3);
+        rating = findViewById(R.id.ratingBar);
+
+        butSend = findViewById(R.id.button6);
+        butShow = findViewById(R.id.button9);
+        butUpdate = findViewById(R.id.button7);
+        butDelete = findViewById(R.id.button8);
+
+        cus = new CusFeedback();
+      
+        butSend.setOnClickListener(new View.OnClickListener()
+
+            {
+                @Override
+                public void onClick (View v){
+                    dbRef = FirebaseDatabase.getInstance().getReference().child("CusFeedback");
+                try {
+                    if (TextUtils.isEmpty(txtName.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter a Name", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(txtEmail.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter a Email", Toast.LENGTH_SHORT).show();
+                    else if (TextUtils.isEmpty(txtFeedback.getText().toString()))
+                        Toast.makeText(getApplicationContext(), "Please enter a Feedback", Toast.LENGTH_SHORT).show();
+                    else {
+                        cus.setName(txtName.getText().toString().trim());
+                        cus.setEmail(txtEmail.getText().toString().trim());
+                        cus.setFeedback(txtFeedback.getText().toString().trim());
+                        float rateValue=rating.getRating();
+                        cus.setRating(Float.parseFloat(String.valueOf(rateValue)));
+
+                        dbRef.child("cus1").setValue(cus);
+                        Toast.makeText(getApplicationContext(), "Successfully inserted", Toast.LENGTH_SHORT).show();
+                        clearControls();
+                    }
+                } catch (NumberFormatException nfe) {
+                    Toast.makeText(getApplicationContext(), "Invalid phone no", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        });
+    }
+    private void clearControls() {
+
+        txtName.setText("");
+        txtEmail.setText("");
+        txtFeedback.setText("");
 
     }
 }
