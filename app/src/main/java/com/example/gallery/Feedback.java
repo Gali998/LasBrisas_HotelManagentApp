@@ -47,7 +47,22 @@ public class Feedback extends AppCompatActivity {
         butDelete = findViewById(R.id.button8);
 
         cus = new CusFeedback();
-     
+       
+
+
+        butUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbRef = FirebaseDatabase.getInstance().getReference();
+                dbRef.child("CusFeedback/cus1/name").setValue(txtName.getText().toString().trim());
+                dbRef.child("CusFeedback/cus1/email").setValue(txtEmail.getText().toString().trim());
+                dbRef.child("CusFeedback/cus1/feedback").setValue(txtFeedback.getText().toString().trim());
+                float rateValue=rating.getRating();
+                dbRef.child("CusFeedback/cus1/rating").setValue(Float.parseFloat(String.valueOf(rateValue)));
+                clearControls();
+            }
+        });
+
 
         butShow.setOnClickListener(new View.OnClickListener() {
                                        @Override
