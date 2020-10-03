@@ -46,6 +46,31 @@
         <activity android:name=".Lavender_Ballroom" />
         <activity android:name=".Lotus_Hall" />
         <activity android:name=".Aquarium_Hall" />
+        <activity
+            android:name=".ContactUs"
+            android:label="Contact Us">
+
+        </activity>
+        <activity
+            android:name=".TripleRoom"
+            android:label="Triple Room" />
+        <activity
+            android:name=".EconomyRoom"
+            android:label="Economy Room" />
+        <activity
+            android:name=".StandardRoom"
+            android:label="Standard Room" />
+        <activity
+            android:name=".FamilyRoom"
+            android:label="Family Room" />
+        <activity
+            android:name=".roomdetails"
+            android:label=" Room details">
+
+        </activity>
+        <activity
+            android:name=".RoomReservation"
+            android:label="RoomReservation" />
     </application>
 
 </manifest>

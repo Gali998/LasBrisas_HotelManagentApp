@@ -51,6 +51,8 @@ public class Dashboard2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(Dashboard2.this,roomdetails.class);
+                startActivity(intent);
             }
         });
 
@@ -83,7 +85,8 @@ public class Dashboard2 extends AppCompatActivity {
         a7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Dashboard2.this, ContactUs.class);
+                startActivity(intent);
             }
         });
 
