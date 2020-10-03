@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "258570996766",
+    "firebase_url": "https://payment-dae63.firebaseio.com",
+    "project_id": "payment-dae63",
+    "storage_bucket": "payment-dae63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258570996766:android:8f16992129010dc7f2f20f",
+        "android_client_info": {
+          "package_name": "com.example.payment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258570996766-7fb4octiodf96k1d8sfsm9dee1i24095.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa3mkK2E1OUkiuk9KCnJHCcJohQa75ya4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258570996766-7fb4octiodf96k1d8sfsm9dee1i24095.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

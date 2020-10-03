@@ -2,7 +2,7 @@
     <string name="app_name">Payment</string>
     <string name="textView">Payment Successfull                 Enjoy the day</string>
     <string name="textView1">Select payment method</string>
-    <string name="textView4">Name</string>
+    <string name="tname">Name</string>
     <string name="textView2">Date</string>
     <string name="textView3">Amount</string>
     <string name="textView5">Enter Card details</string>
@@ -10,5 +10,35 @@
     <string name="textView8">Card number</string>
     <string name="textView9">Expiry Date</string>
     <string name="textView6">Security code</string>
+    <string name="Name">enter customer name</string>
+    <string name="Date">enter payment date</string>
+    <string name="name">enter name</string>
+    <string name="date">please enter payment date</string>
+    <string name="amount">enter payment amount</string>
+    <string name="cname">enter card holder name</string>
+    <string name="cnumber">enter card number</string>
+    <string name="edate">enter expiry date of card</string>
+    <string name="bsave">SAVE</string>
+    <string name="bshow">SHOW</string>
+    <string name="bconfirm">CONFIRM</string>
+    <string name="bupdate">UPDATE</string>
+    <string name="bdelete">DELETE</string>
+    <string name="Bconfirm">Confirm your payment</string>
+
+
+    <string name="Tdessert">Dessert</string>
+    <string name="tsandwich">Sandwich</string>
+    <string name="textsandwich1">French fries club sandwich</string>
+    <string name="textsandwich2">Chicken club sandwich</string>
+    <string name="textsandwixh3">veg grilled sandwich</string>
+    <string name="textmain1">Grilled salmon with Avacado greek salsa and Orzo</string>
+    <string name="textrice3">Fish Biriyani  price=Rs300.00</string>
+    <string name="textmain4">"Pastelon (Puerto Rican Lasangna) "</string>
+    <string name="textdessert3">Geteaux Archives</string>
+    <string name="textwhisky">Whisky</string>
+    <string name="textwine2">" WARWICK                             THREE CAPE LADIES"</string>
+    <string name="textwhisky1">Johnnie Walker Black Lable</string>
+    <string name="textwhisky2">Johnnie Walker Gold Lable Reserve</string>
+    <string name="textdessert4">Watalappan</string>
 
 </resources>

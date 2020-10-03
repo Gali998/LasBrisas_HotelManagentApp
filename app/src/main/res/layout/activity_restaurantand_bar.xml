@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cdc9c9"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="100sp"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="304dp"
+                android:layout_marginLeft="304dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="1dp"
+                android:text="Bar" />
+
+            <TextView
+                android:id="@+id/txtmain1"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="75dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="#A364AE"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="Main Course"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="130dp">
+
+
+                    <ImageView
+                        android:id="@+id/imgmain1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/main1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.138"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.099" />
+
+                    <TextView
+                        android:id="@+id/txtmain2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Pan-seaared Salmon     price=Rs600.00 "
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+                    <ImageView
+                        android:id="@+id/imgmain2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginEnd="00dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/main3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.138"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.099" />
+
+                    <TextView
+                        android:id="@+id/txtmain3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Cuban lasangna                         price=Rs900.00 "
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+                    <ImageView
+                        android:id="@+id/imgmain3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/main4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.138"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.099" />
+
+                    <TextView
+                        android:id="@+id/txtmain4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="70dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/textmain1"
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+
+                    <ImageView
+                        android:id="@+id/imgmain4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/main5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.138"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.099" />
+
+                    <TextView
+                        android:id="@+id/txtmain5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="70dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/textmain4"
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtRice"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="78dp"
+                android:layout_marginLeft="78dp"
+                android:layout_marginEnd="103dp"
+                android:layout_marginRight="103dp"
+                android:layout_marginBottom="10dp"
+                android:background="#A364AE"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="Rice"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="130dp">
+
+                    <ImageView
+                        android:id="@+id/imgrice1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/rice2" />
+
+                    <TextView
+                        android:id="@+id/txtRice1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Instant pot chicken and rice             price=Rs300.00 "
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+                    <ImageView
+                        android:id="@+id/imgrice2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/rice1" />
+
+                    <TextView
+                        android:id="@+id/txtRice2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Baked chicken and rice             price=Rs500.00 "
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+
+                    <ImageView
+                        android:id="@+id/imgrice3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/rice3" />
+
+                    <TextView
+                        android:id="@+id/txtRice3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/textrice3"
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/txtdessert"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="71dp"
+                android:layout_marginLeft="71dp"
+                android:layout_marginEnd="103dp"
+                android:layout_marginRight="103dp"
+                android:layout_marginBottom="10dp"
+                android:background="#A364AE"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="Dessert"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="130dp">
+
+                    <ImageView
+                        android:id="@+id/cake1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/cake1" />
+
+                    <TextView
+                        android:id="@+id/txtdessert1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Nutella cake                          1 piece=Rs150.00 "
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+                    <ImageView
+                        android:id="@+id/cake2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/cake2" />
+
+                    <TextView
+                        android:id="@+id/txtdessert5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="70dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Chocolate lava cake                          1 cake=Rs450.00 "
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+                    <ImageView
+                        android:id="@+id/cake3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/cake5" />
+
+                    <TextView
+                        android:id="@+id/txtdessert3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="70dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/textdessert3"
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+
+                    <ImageView
+                        android:id="@+id/watalappan1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/watalappan" />
+
+                    <TextView
+                        android:id="@+id/txtdessert4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="70dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/textdessert4"
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtSandwich"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="78dp"
+                android:layout_marginLeft="78dp"
+                android:layout_marginEnd="103dp"
+                android:layout_marginRight="103dp"
+                android:layout_marginBottom="10dp"
+                android:background="#A364AE"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="@string/tsandwich"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" >
+
+                    <ImageView
+                        android:id="@+id/imgsandwich1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/sandwich1" />
+
+                    <TextView
+                        android:id="@+id/txtsandwich1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/textsandwich1"
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+                    <ImageView
+                        android:id="@+id/imgsandwich2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/sandwich2" />
+
+                    <TextView
+                        android:id="@+id/txtsandwich2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/textsandwich2"
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+                    <ImageView
+                        android:id="@+id/imgsandwich3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="50dp"
+                        android:src="@drawable/sandwich3" />
+
+                    <TextView
+                        android:id="@+id/txtsandwich3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="70dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/textsandwixh3"
+                        android:textAlignment="center"
+                        android:textColor="#0E0D0D" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
