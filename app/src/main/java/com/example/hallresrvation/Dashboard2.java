@@ -11,7 +11,7 @@ import android.widget.RelativeLayout;
 
 public class Dashboard2 extends AppCompatActivity {
 
-    RelativeLayout a2,a1,a3,a4,a5,a6,a7;
+    RelativeLayout a2,a1,a3,a4,a5,a6,a7,a8;
     //Animation frombottom;
    // ConstraintLayout myCon;
     @Override
@@ -26,6 +26,7 @@ public class Dashboard2 extends AppCompatActivity {
         a5 = findViewById(R.id.a5);
         a6 = findViewById(R.id.a6);
         a7 = findViewById(R.id.a7);
+        a8 = findViewById(R.id.a8);
 
        // myCon = (RelativeLayout) findViewById(R.id.conL1);
 
@@ -57,6 +58,8 @@ public class Dashboard2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(Dashboard2.this, Spa.class);
+                startActivity(intent);
             }
         });
 
@@ -72,6 +75,8 @@ public class Dashboard2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(Dashboard2.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -79,6 +84,15 @@ public class Dashboard2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+            }
+        });
+
+        a8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Dashboard2.this, Feedback.class);
+                startActivity(intent);
             }
         });
     }

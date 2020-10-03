@@ -22,4 +22,60 @@
         <item>Wedding</item>
         <item>Business</item>
     </array>
+    <string name="Gtitle">"Moment of Pleasure And Luxury "</string>
+    <string name="Gtitle2">Taste</string>
+    <string name="headline1">Room and Suites</string>
+    <string name="headline2">Halls</string>
+    <string name="headline3">Swimming pool</string>
+    <string name="headline4">Dining</string>
+    <string name="headline5">Spa</string>
+    <string name="title">Name</string>
+    <string name="title2">E-mail</string>
+    <string name="title3">Feedback</string>
+    <string name="btn">Send Feedback</string>
+    <string name="textV">Type name....</string>
+    <string name="textV2">Type email....</string>
+    <string name="textV3">Type here....</string>
+    <string name="title4">Phone No</string>
+    <string name="title5">Package</string>
+    <string name="title6">Requested Date</string>
+    <string name="title7">Appointment Time</string>
+    <string name="textV4">phone number</string>
+    <string name="textV5">name</string>
+    <string name="textV6">email</string>
+    <string name="textV7">Select</string>
+    <string-array name="Packages">
+        <item>Intensive Package</item>
+        <item>Wellness Package</item>
+        <item>Soft Package</item>
+    </string-array>
+    <string name="textV8">time</string>
+    <string name="textV9">dd/mm/yy</string>
+    <string name="btn2">Book Now</string>
+    <string name="headL">Relaxing  And  Soothing</string>
+    <string name="headL2">Luxury  Life</string>
+    <string name="btn3">View More</string>
+    <string name="label1">Intensive Ayurveda Package</string>
+    <string name="label2">Wellness Ayurveda Package</string>
+    <string name="label3">Soft Ayurveda Package</string>
+    <string name="label4">Rs : 5000</string>
+    <string name="label5">Rs : 6000</string>
+    <string name="label6">Rs : 3000</string>
+    <string name="text_paragraph">Inclusions of the package :</string>
+    <string name="tView1">>   Four full-body massages  – 60 minutes</string>
+    <string name="tView2">>   Herbal Pichu</string>
+    <string name="tView3">>   An herbal bath – 20 minutes</string>
+    <string name="tView4">>   A Chakra massage – 45 minutes</string>
+    <string name="tView5">>   A Shirodhara therapy – 60 minutes</string>
+    <string name="tView6">>   An herbal facial or herbal scrub – 35 minutes</string>
+    <string name="tView9">LKR 5000  per person</string>
+    <string name="tView7">LKR 6000 per person</string>
+    <string name="tView8">LKR 3000 per person</string>
+    <string name="tView10">>   Two gym sessions</string>
+    <string name="tView">>   Four Hatha yoga and meditation sessions</string>
+    <string name="butn1">Send</string>
+    <string name="butn2">SHOW</string>
+    <string name="butn3">UPDATE</string>
+    <string name="butn4">DELETE</string>
+    <string name="butn5">BOOK NOW</string>
 </resources>

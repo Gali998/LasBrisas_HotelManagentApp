@@ -3,4 +3,21 @@
     <color name="colorPrimary">#fff</color>
     <color name="colorPrimaryDark">#DDA0DD</color>
     <color name="colorAccent">#d17ae6</color>
+    <color name="blue">#0f0c66</color>
+    <color name="nmm">#F5542B</color>
+    <color name="ppp">#2F1BDD</color>
+    <color name="sssssss">#E4A70D</color>
+    <color name="design_default_color_background">#000080</color>
+    <color name="design_default_color_on_secondary">#000080</color>
+    <color name="design_default_color_error">#000080</color>
+
+
+    <color name="pi">#000080</color>
+    <color name="ii">#6495ed</color>
+    <color name="lightgrey">#D3D0CF</color>
+    <color name="io">#80EEA8</color>
+    <color name="lll">#48BE3B</color>
+    <color name="aaaaa">#EEE304</color>
+    <color name="darkgreen">#0B9906</color>
+    <color name="grey">#6F605F</color>
 </resources>
