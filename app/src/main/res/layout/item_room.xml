@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/checkin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="Checkin"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginVertical="5dp"/>
+
+        <TextView
+            android:id="@+id/checkout6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="check out"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginVertical="5dp"/>
+
+        <TextView
+            android:id="@+id/Roomname3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="Room name"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginVertical="5dp"/>
+
+        <TextView
+            android:id="@+id/rooms0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="No of rooms"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginVertical="5dp"/>
+
+
+        <TextView
+            android:id="@+id/adult8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="adults"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginVertical="5dp"/>
+
+        <TextView
+            android:id="@+id/Gkids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="kids"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginVertical="5dp"/>
+
+        <TextView
+            android:id="@+id/name9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="Name"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginVertical="5dp"/>
+
+        <TextView
+            android:id="@+id/Email6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="Email"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginVertical="5dp"/>
+
+        <TextView
+            android:id="@+id/ContactNo4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="Contact No"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginVertical="5dp"/>
+
+        <Button
+            android:id="@+id/delBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Delete"
+            android:background="#000"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

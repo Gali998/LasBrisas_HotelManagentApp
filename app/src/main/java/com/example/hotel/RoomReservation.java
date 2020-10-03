@@ -91,6 +91,28 @@ public class RoomReservation extends AppCompatActivity {
         builder = new AlertDialog.Builder(this);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                builder.setMessage("Do you want to book this room now ?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                finish();
+                                Toast.makeText(RoomReservation.this.getApplicationContext(), "Booking success",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                //  Action for 'NO' Button
+                                dialog.cancel();
+                                Toast.makeText(RoomReservation.this.getApplicationContext(), "booking canceled",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                //Creating dialog box
+                AlertDialog alert = builder.create();
+                //Setting the title manually
+                alert.setTitle("Booking successfull");
+                alert.show();
 
                 dbRef = FirebaseDatabase.getInstance().getReference().child("Reservation");
                 try {
@@ -241,28 +263,6 @@ public class RoomReservation extends AppCompatActivity {
                         //  @Override
                         // public void onClick(View view) {
 
-                        builder.setMessage("Do you want to book this room now ?")
-                                .setCancelable(false)
-                                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        finish();
-                                        Toast.makeText(RoomReservation.this.getApplicationContext(), "Booking success",
-                                                Toast.LENGTH_SHORT).show();
-                                    }
-                                })
-                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        //  Action for 'NO' Button
-                                        dialog.cancel();
-                                        Toast.makeText(RoomReservation.this.getApplicationContext(), "booking canceled",
-                                                Toast.LENGTH_SHORT).show();
-                                    }
-                                });
-                        //Creating dialog box
-                        AlertDialog alert = builder.create();
-                        //Setting the title manually
-                        alert.setTitle("Booking successfull");
-                        alert.show();
 
 
                         //Uncomment the below code to Set the message and title from the strings.xml file
@@ -324,7 +324,6 @@ public class RoomReservation extends AppCompatActivity {
         });
     }
 }
-
 
 
 
