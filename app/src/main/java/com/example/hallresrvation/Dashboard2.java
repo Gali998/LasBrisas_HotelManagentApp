@@ -33,9 +33,9 @@ public class Dashboard2 extends AppCompatActivity {
         a2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Dashboard2.this,ReataurantandBar.class);
                // Intent intent = new Intent(Dashboard2.this,.class);
-               // startActivity(intent);
+                startActivity(intent);
             }
         });
 

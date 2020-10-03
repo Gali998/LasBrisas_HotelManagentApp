@@ -31,7 +31,7 @@ public class HallReservation extends AppCompatActivity{
     EditText date;
     DatePickerDialog datePickerDialog;
     EditText time1;
-    Button button,btn2;
+    Button button,btn2,btnpay;
     AlertDialog.Builder builder;
     Spinner spinner1;
 
@@ -54,6 +54,7 @@ public class HallReservation extends AppCompatActivity{
         email1 = findViewById(R.id.email);
         add = findViewById(R.id.addr);
 
+        btnpay =findViewById(R.id.button9);
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("HallReservation");
 
@@ -95,6 +96,14 @@ public class HallReservation extends AppCompatActivity{
                 //Intent intent = new Intent(HallReservation.this,RetrieveHallDetails.class );
                 //startActivity(intent);
                 openActivity();
+            }
+        });
+        //To navigate to payment class
+        btnpay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HallReservation.this,payment.class);
+                startActivity(intent);
             }
         });
 

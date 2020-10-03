@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Bar"></activity>
+        <activity android:name=".ReataurantandBar" />
+        <activity android:name=".Confirmpage" />
+        <activity android:name=".payment"></activity>
         <activity android:name=".package3">
 
         </activity>
