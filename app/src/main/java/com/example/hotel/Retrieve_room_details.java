@@ -19,7 +19,7 @@ import java.util.List;
 
 public class Retrieve_room_details extends AppCompatActivity {
     ListView myRoomListView;
-    List<Reservation> roomList;
+    List<Reservation>ListReserve;
 
     DatabaseReference dbRef;
     @Override
@@ -28,24 +28,24 @@ public class Retrieve_room_details extends AppCompatActivity {
         setContentView(R.layout.activity_retrieve_room_details);
 
         myRoomListView = findViewById(R.id.myRoomListView);
-        roomList = new ArrayList<>();
+        ListReserve = new ArrayList<>();
 
         dbRef = FirebaseDatabase.getInstance().getReference("Reservation");
 
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                roomList.clear();
+                ListReserve.clear();
 
-                for(DataSnapshot hallDatasnap:dataSnapshot.getChildren()){
+                for(DataSnapshot roomDatasnap:dataSnapshot.getChildren()){
 
-                    Reservation reservation = hallDatasnap.getValue(Reservation.class);
-                    roomList.add(reservation);
+                    Reservation reservation = roomDatasnap.getValue(Reservation.class);
+                    ListReserve.add(reservation);
 
                 }
 
-                //ListAdapter adapter = new ListAdapter(Retrieve_room_details.this,roomList);
-                //myRoomListView.setAdapter((android.widget.ListAdapter) adapter);
+                //ListAdapter adapter = new ListAdapter(Retrieve_room_details.this,ListReserve);
+                //myRoomListView.setAdapter(adapter);
             }
 
             @Override

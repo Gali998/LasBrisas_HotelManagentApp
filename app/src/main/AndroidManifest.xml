@@ -9,12 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".update_room_reservation"></activity>
+        <activity android:name=".Rooms"></activity>
+        <activity android:name=".Room_display" />
+        <activity android:name=".Recycleroom" />
         <activity android:name=".ListRoom" />
         <activity android:name=".Retrieve_room_details" />
         <activity
             android:name=".ContactUs"
-            android:label="Contact Us" />
+            android:label="Contact Us">
+            
+        </activity>
         <activity
             android:name=".TripleRoom"
             android:label="Triple Room" />
@@ -39,7 +43,6 @@
         <activity
             android:name=".RoomReservation"
             android:label="RoomReservation" />
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

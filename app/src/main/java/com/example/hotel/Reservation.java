@@ -2,8 +2,9 @@ package com.example.hotel;
 
 public class Reservation {
 
-   private String date1;
-    private String date2;
+   private String checkin;
+    private String checkout;
+    private String rname;
     private String rooms;
     private String adults;
     private String kids;
@@ -14,9 +15,10 @@ public class Reservation {
   public Reservation(){
 
    }
-    public Reservation(String date1, String date2, String rooms, String adults, String kids, String name, String email, String contactNo) {
-        this.date1 = date1;
-        this.date2 = date2;
+    public Reservation(String checkin, String checkout,String rname, String rooms, String adults, String kids, String name, String email, String contactNo) {
+        this.checkin =checkin;
+        this.checkin = checkout;
+        this.rname=rname;
         this.rooms = rooms;
         this.adults = adults;
         this.kids = kids;
@@ -24,7 +26,8 @@ public class Reservation {
         this.email = email;
         this.contactNo = contactNo;
     }
-    public Reservation(String rooms, String adults, String kids, String name, String email, String contactNo) {
+    public Reservation(String rname,String rooms, String adults, String kids, String name, String email, String contactNo) {
+        this.rname=rname;
         this.rooms = rooms;
         this.adults = adults;
         this.kids = kids;
@@ -32,20 +35,28 @@ public class Reservation {
         this.email = email;
         this.contactNo = contactNo;
     }
-    public String getDate1() {
-        return date1;
+    public String getCheckin() {
+        return checkin;
     }
 
-    public void setDate1(String date1) {
-        this.date1 = date1;
+    public void setCheckin(String checkin) {
+        this.checkin = checkin;
     }
 
-    public String getDate2() {
-        return date2;
+    public String getCheckout() {
+        return checkout;
     }
 
-    public void setDate2(String date2) {
-        this.date2 = date2;
+    public void setCheckout(String checkout) {
+        this.checkout = checkout;
+    }
+
+    public String getRname() {
+        return rname;
+    }
+
+    public void setRname(String rname) {
+        this.rname =rname;
     }
 
     public String getRooms() {

@@ -25,6 +25,14 @@
         android:textSize="18sp" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/Roomname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RoomName"
+        android:textSize="18sp"
+        android:layout_marginVertical="5dp"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/NoOfRooms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -69,8 +69,9 @@ public class ContactUs extends AppCompatActivity {
                         ctd.setEmail(txtEmail.getText().toString().trim());
                         ctd.setConNo(Integer.parseInt(txtConNo.getText().toString().trim()));
                         ctd.setMessage(txtMessage.getText().toString().trim());
-                        dbRef.push().setValue(ctd);
-                        dbRef.child("Ctd2").setValue(ctd);
+                        dbRef.setValue(ctd);
+                       // dbRef.push().setValue(ctd);
+                        dbRef.child("ctd1").setValue(ctd);
                         Toast.makeText(ContactUs.this.getApplicationContext(), "Data Saved Successfully", Toast.LENGTH_SHORT).show();
                         ContactUs.this.clearControls();
                     }
@@ -80,108 +81,92 @@ public class ContactUs extends AppCompatActivity {
                 }
 
             }
-        });
+        });btnShow.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View view) {
+                                           DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Contact/ctd1");
+                                           readRef.addListenerForSingleValueEvent(new ValueEventListener() {
 
-        btnShow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-        DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd2");
-        readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                                               @Override
+                                               public void onDataChange(DataSnapshot dataSnapshot) {
+                                                   if (dataSnapshot.hasChildren()) {
+                                                       txtName.setText(dataSnapshot.child("name").getValue().toString());
+                                                       txtEmail.setText(dataSnapshot.child("email").getValue().toString());
+                                                       txtConNo.setText(dataSnapshot.child("conNo").getValue().toString());
+                                                       txtMessage.setText(dataSnapshot.child("message").getValue().toString());
 
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.hasChildren()) {
-                    txtName.setText(dataSnapshot.child("name").getValue().toString());
-                    txtEmail.setText(dataSnapshot.child("email").getValue().toString());
-                    txtConNo.setText(dataSnapshot.child("conNo").getValue().toString());
-                    txtMessage.setText(dataSnapshot.child("message").getValue().toString());
-
-                } else
-                    Toast.makeText(getApplicationContext(), "No source to display", Toast.LENGTH_SHORT).show();
-            }
+                                                   } else
+                                                       Toast.makeText(getApplicationContext(), "No source to display", Toast.LENGTH_SHORT).show();
+                                               }
 
 
+                                               @Override
+                                               public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                               }
 
-            }
-
-        });
+                                           });
 
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("Contact");
-                upRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.hasChild("Ctd2")) {
-                            try {
-                                ctd.setName(txtName.getText().toString().trim());
-                                ctd.setEmail(txtName.getText().toString().trim());
-                                ctd.setConNo(Integer.parseInt(txtConNo.getText().toString().trim()));
-                                ctd.setMessage(txtMessage.getText().toString().trim());
+                //DatabaseReference upRef = FirebaseDatabase.getInstance().getReference().child("Contact");
+                //upRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                // @Override
+                //public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                // if (dataSnapshot.hasChild("Ctd2")) {
+                //try {
+                ctd.setName(txtName.getText().toString().trim());
+                ctd.setEmail(txtEmail.getText().toString().trim());
+                ctd.setConNo(Integer.parseInt(txtConNo.getText().toString().trim()));
+                ctd.setMessage(txtMessage.getText().toString().trim());
 
 
-                                dbRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd2");
-                                dbRef.setValue(ctd);
-                                clearControls();
+                //dbRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd2");
+                dbRef = FirebaseDatabase.getInstance().getReference();
+                dbRef.child("Contact/ctd1/name").setValue(txtName.getText().toString().trim());
+                dbRef.child("Contact/ctd1/email").setValue(txtEmail.getText().toString().trim());
+                dbRef.child("Contact/ctd1/conNo").setValue(Integer.parseInt(txtConNo.getText().toString().trim()));
+                dbRef.child("Contact/ctd1/message").setValue(txtMessage.getText().toString().trim());
 
-                                Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
 
-                            } catch (NumberFormatException e) {
-                                Toast.makeText(getApplicationContext(), "Invalid Contact Number", Toast.LENGTH_SHORT).show();
-                            }
-                        } else
-                            Toast.makeText(getApplicationContext(), "No source to update", Toast.LENGTH_SHORT).show();
-                    }
+                // dbRef.setValue(ctd);
+                clearControls();
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                //Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
 
-                    }
+                //} catch (NumberFormatException e) {
+                //Toast.makeText(getApplicationContext(), "Invalid Contact Number", Toast.LENGTH_SHORT).show();
+                // }
+                // } else
+                //Toast.makeText(getApplicationContext(), "No source to update", Toast.LENGTH_SHORT).show();
+                //}
 
+                // @Override
+                // public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
                 });
 
                 btnDelete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
-                        DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Contact");
-                        delRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                if (dataSnapshot.hasChild("Ctd2")) {
+                        //DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Contact");
+                        //delRef.addListenerForSingleValueEvent(new ValueEventListener() {
 
-                                    dbRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("Ctd2");
-                                    dbRef.setValue(ctd);
-                                    clearControls();
+                        dbRef = FirebaseDatabase.getInstance().getReference().child("Contact").child("ctd1");
+                        dbRef.removeValue();
+                        //dbRef.child("cus1").setValue(cus);
 
-                                    Toast.makeText(getApplicationContext(), "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
-
-                                } else
-                                    Toast.makeText(getApplicationContext(), "No source to delete", Toast.LENGTH_SHORT).show();
-
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-                            }
-
-
-                        });
-
+                        Toast.makeText(getApplicationContext(), "Data Deleted Successfully", Toast.LENGTH_SHORT).show();
                     }
+
                 });
-            }
-        });
-    }
 
 
-
-
+        }
     public void onBackPressed()
     {
 

@@ -27,6 +27,13 @@
     <string name="show">Show</string>
     <string name="noofrooms">No of rooms</string>
     <string name="no_of_kids">NoOfKids</string>
+    <string name="msg2">\"Your reservation deleted successfully\"</string>
+    <string name="search">Btnsearch</string>
+    <string name="btnsearch">Search booking</string>
+    <string name="room_name">Room name</string>
+    <string name="Roomshow">Show</string>
+    <string name="Roomupdate">Update</string>
+    <string name="Roomdelete">Delete</string>
     <array name="noofrooms">
         <item>1</item>
         <item>2</item>

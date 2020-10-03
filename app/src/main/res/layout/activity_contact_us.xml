@@ -35,8 +35,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="205dp"
-        android:layout_height="95dp"
+        android:layout_width="187dp"
+        android:layout_height="91dp"
         android:src="@drawable/gen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,8 +75,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="200dp"
-        android:layout_height="74dp"
+        android:layout_width="176dp"
+        android:layout_height="70dp"
         android:src="@drawable/res"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,13 +103,13 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="78dp"
+        android:layout_height="27dp"
         android:fontFamily="sans-serif"
         android:text="@string/Name"
-        android:textColor="#050505"
-        android:textSize="14sp"
-        android:textStyle="normal"
+        android:textColor="#959292"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.018"
@@ -119,11 +119,13 @@
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="70dp"
-        android:layout_height="32dp"
+        android:layout_width="108dp"
+        android:layout_height="37dp"
         android:fontFamily="sans-serif"
         android:text="@string/message"
-        android:textColor="#0B0B0B"
+        android:textColor="#858383"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.02"
@@ -137,7 +139,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:text="@string/Email"
-        android:textColor="#0C0C0C"
+        android:textColor="#979393"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.018"
@@ -151,7 +155,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:text="@string/contcatNo"
-        android:textColor="#040404"
+        android:textColor="#7E7C7C"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.002"
@@ -214,8 +220,8 @@
 
     <EditText
         android:id="@+id/conNo"
-        android:layout_width="295dp"
-        android:layout_height="50dp"
+        android:layout_width="286dp"
+        android:layout_height="51dp"
         android:ems="10"
         android:inputType="phone"
         android:shadowColor="#4CAF50"
@@ -228,8 +234,8 @@
 
     <EditText
         android:id="@+id/message"
-        android:layout_width="297dp"
-        android:layout_height="72dp"
+        android:layout_width="260dp"
+        android:layout_height="71dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:ems="10"
