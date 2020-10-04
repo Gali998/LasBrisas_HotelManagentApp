@@ -70,22 +70,7 @@ public class payment extends AppCompatActivity {
 
 
 
-        reservePayment.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                reservePaymentOption = reservePayment.findViewById(i);
 
-                switch(i){
-                    case R.id.ButradioMaster:
-
-                    case R.id.ButradioVisa:
-                        strpaymentmethod = reservePaymentOption.getText().toString();
-                        break;
-
-                    default:
-                }
-            }
-        });
 
         btndelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,6 +129,23 @@ public class payment extends AppCompatActivity {
             }
         });
 
+        reservePayment.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                reservePaymentOption = reservePayment.findViewById(i);
+
+                switch(i){
+                    case R.id.ButradioMaster:
+
+                    case R.id.ButradioVisa:
+                        strpaymentmethod = reservePaymentOption.getText().toString();
+                        break;
+
+                    default:
+                }
+            }
+        });
+
         btnsave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -193,7 +195,6 @@ public class payment extends AppCompatActivity {
                 }catch (NumberFormatException nfe ){
                     Toast.makeText(getApplicationContext(),  "Invalid  card number", Toast.LENGTH_SHORT). show();
                 }
-
             }
         });
 
@@ -201,6 +202,7 @@ public class payment extends AppCompatActivity {
         btnconfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                dbRef = FirebaseDatabase.getInstance().getReference().child("reservationPayment");
                 try{
                     if(TextUtils.isEmpty(reservePayment.toString()))
                         Toast.makeText(getApplicationContext(),  "Empty payment method", Toast.LENGTH_SHORT). show();

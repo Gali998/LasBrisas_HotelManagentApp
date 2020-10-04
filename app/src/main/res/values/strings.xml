@@ -87,7 +87,7 @@
     <string name="detail2">We have economy rooms available for solo travelers or those wishing to have their own privacy.These are comforatable with a large double bed have their own suits.All have plenty of light and windows are nicely finished.this is most comfortable for  two persons
 </string>
     <string name="msg1">Send Us a Message</string>
-    <string name="Name">Name</string>
+    <string name="Name2roid">Name</string>
     <string name="Email">Email</string>
     <string name="contcatNo">Contact No</string>
     <string name="message">Message</string>
@@ -130,11 +130,11 @@
     <string name="cname">enter card holder name</string>
     <string name="cnumber">enter card number</string>
     <string name="edate">enter expiry date of card</string>
-    <string name="bsave">SAVE</string>
-    <string name="bshow">SHOW</string>
+    <string name="bsave">SAVE PAYMENT DETAILS</string>
+    <string name="bshow">SHOW DETAILS</string>
     <string name="bconfirm">CONFIRM</string>
-    <string name="bupdate">UPDATE</string>
-    <string name="bdelete">DELETE</string>
+    <string name="bupdate">UPDATE DETAILS</string>
+    <string name="bdelete">DELETE PAYMENT</string>
     <string name="Bconfirm">Confirm your payment</string>
 
 

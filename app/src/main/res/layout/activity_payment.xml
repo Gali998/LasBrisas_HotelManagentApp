@@ -368,31 +368,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginEnd="3dp"
             android:background="#9874a7"
-            android:text="@string/bsave" />
+            android:text="@string/bsave"
+            android:layout_marginRight="3dp" />
 
         <Button
             android:id="@+id/Butshow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="#9874a7"
-            android:text="@string/bshow" />
+            android:text="@string/bshow"
+            android:layout_marginRight="3dp" />
 
         <Button
             android:id="@+id/Butupdate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="#9874a7"
-            android:text="@string/bupdate" />
+            android:text="@string/bupdate"
+            android:layout_marginRight="3dp" />
         <Button
             android:id="@+id/Butdelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
             android:layout_weight="1"
             android:background="#9874a7"
-            android:text="@string/bdelete" />
+            android:text="@string/bdelete"
+            android:layout_marginRight="3dp" />
 
 
 
